@@ -1,0 +1,64 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+ol,ul {
+    list-style: none;
+}
+caption,th {
+    text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym {
+    border: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+button,input,textarea{
+	outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+/**flex:1*/
+.flex-1{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+}
+/*display:flex*/
+.flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+}
+/*超出用...显示*/
+.ellipsis{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
