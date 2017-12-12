@@ -9,7 +9,6 @@
 			ref="multipleTable"
 			:data="tableData3"
 			tooltip-effect="dark"
-			border
 			style="border-top:0">
 			<el-table-column
 				type="selection"
@@ -33,6 +32,14 @@
 				<template slot-scope="scope">{{ scope.row.score }}</template>
 			</el-table-column>
 		</el-table>
+		<div class="block">
+			<el-pagination
+			:current-page="currentPage4"
+			:page-sizes="['100','200','300','400']"
+			:page-size='5'
+			layout='total,sizes,prev,pager,next,jumper'
+			:total='1000'></el-pagination>
+		</div>
 	</div>
 </template>
 <script>
@@ -40,6 +47,7 @@
 		name:"StudentScore",
 		data() {
 			return {
+				currentPage4:5,
 				tableData3: [{
 		          date: '1',
 		          name: '王小虎',

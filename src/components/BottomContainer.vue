@@ -7,14 +7,14 @@
 						<template slot="title"><i class="iconfont icon-zhuye"></i>首页</template>
 						<el-menu-item-group>
 							<el-menu-item index="basic">子菜单1.1</el-menu-item>
-							<el-menu-item index="1-2">子菜单1.2</el-menu-item>
+							<el-menu-item index="submenu">子菜单1.2</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
 					<el-submenu index="2">
 						<template slot="title"><i class="el-icon-message"></i>学生信息</template>
 						<el-menu-item-group>
 							<el-menu-item index="studentScore">学生成绩查询</el-menu-item>
-							<el-menu-item index="2-2">学生学历查询</el-menu-item>
+							<el-menu-item index="2-1">学生学历查询</el-menu-item>
 							<el-menu-item index="2-2">学生违纪记录查询</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
@@ -30,7 +30,7 @@
 			</el-aside>
 			<el-main>
 				<keep-alive>
-					<router-view class="animated zoomIn"></router-view>
+					<router-view class="animated fadeInRightBig"></router-view>
 				</keep-alive>
 			</el-main>
 		</el-container>
