@@ -2,7 +2,7 @@
 	<div class="bottom-container">
 		<el-container>
 			<el-aside width="201px">
-				<el-menu style="border-right:0" router :default-active="defaultActive">
+				<el-menu style="border-right:0" unique-opened router :default-active="defaultActive">
 					<el-submenu index="1">
 						<template slot="title"><i class="iconfont icon-zhuye"></i>首页</template>
 						<el-menu-item-group>
