@@ -7,26 +7,10 @@
 			<div class="logo">管理系统logo</div>
 			<el-container width="200px">
 				<el-menu style="border-right:0; width: 200px" unique-opened router :default-active="defaultActive">
-					<el-submenu index="1" style="width: 200px">
-						<template slot="title"><i class="iconfont icon-zhuye"></i>首页</template>
-						<el-menu-item-group style="width: 200px">
-							<el-menu-item index="basic">子菜单1.1</el-menu-item>
-							<el-menu-item index="submenu">子菜单1.2</el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-					<el-submenu index="2" style="width: 200px">
-						<template slot="title"><i class="el-icon-message"></i>信息</template>
-						<el-menu-item-group style="width: 200px">
-							<el-menu-item index="studentScore">学生成绩查询</el-menu-item>
-							<el-menu-item index="2-1">学生学历查询</el-menu-item>
-							<el-menu-item index="2-2">学生违纪记录查询</el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-					<el-submenu index="3" style="width: 200px">
-						<template slot="title"><i class="el-icon-setting"></i>设置</template>
-						<el-menu-item-group>
-							<el-menu-item index="3-1">修改密码</el-menu-item>
-							<el-menu-item index="3-2">退出系统</el-menu-item>
+					<el-submenu v-for="(route, index) in $router.options.routes" v-if="route.leaf" :index="route.name" style="width: 200px">
+						<template slot="title"><i class="iconfont icon-zhuye"></i>{{ route.name }}</template>
+						<el-menu-item-group style="width: 200px" v-for="children in route.children" :key="children.name">
+							<el-menu-item :index="children.path">{{ children.name }}</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
 				</el-menu>
