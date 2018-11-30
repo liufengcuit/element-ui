@@ -36,13 +36,13 @@ export default new Router({
                 name: '基础组件'
             },
             {
-                path:'/studentScore',
+                path:'/home/studentScore',
                 name:'学生表格',
                 iconCls: '',
                 component:studentScore
             },
             {
-                path:'/submenu',
+                path:'/home/submenu',
                 iconCls: '',
                 name:'性别',
                 component:submenu
@@ -56,7 +56,7 @@ export default new Router({
         component:home,
         children: [
             {
-                path: '/userlist',
+                path: '/home/userlist',
                 iconCls: '',
                 component: userList,
                 name: '用户列表'
